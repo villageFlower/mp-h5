@@ -10,14 +10,6 @@ jobs:
     steps:
       - name: Checkout the repo 
         uses: actions/checkout@v2
-        
-      - name: Set up JDK
-        uses: actions/setup-java@v1
-        with:
-          java-version: 17
-          
-      - name: Build Maven Package
-        run: mvn clean install -DskipTests
       
       - name: Build image 
         run: docker build -t mp .
