@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  liuexuewang_h5:
+    image: ghcr.io/villageflower/mp_h5:latest
+    container_name: mp_h5
+    environment:
+      - IS_PROD=TRUE
+    ports:
+      - "8999:80"
